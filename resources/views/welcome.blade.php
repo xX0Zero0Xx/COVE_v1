@@ -23,7 +23,7 @@
                 <form method="POST" action="">
                     @csrf
 
-                    <label for="alias">Nombre de usuario / Correo electrónico</label>
+                    <label for="alias">Nombre de usuario / Correo electrónico / Alias</label>
                     <input type="text" id="alias" name="alias" value="{{ old('alias') }}" placeholder="Ej. Mambo" required>
 
                     <label for="contraseña">Contraseña</label>
