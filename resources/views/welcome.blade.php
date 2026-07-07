@@ -16,37 +16,31 @@
         <h1>Cove</h1>
     </header>
 
-    <section class="seccion-inicio">
-        <div class="bloque">
-            <h2>Iniciar sesión</h2>
-            <form method="POST" action="">
-                @csrf
+    <div class="contenedor-inicio">
+        <section class="seccion-inicio">
+            <div class="bloque">
+                <h2>Iniciar sesión</h2>
+                <form method="POST" action="">
+                    @csrf
 
-                <label for="alias">Usuario (alias)</label>
-                <input type="text" id="alias" name="alias" value="{{ old('alias') }}" placeholder="Ej. Mambo" required>
+                    <label for="alias">Nombre de usuario / Correo electrónico</label>
+                    <input type="text" id="alias" name="alias" value="{{ old('alias') }}" placeholder="Ej. Mambo" required>
 
-                <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="contraseña" placeholder="******" required>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="******" required>
 
-                <button type="submit" class="btn-enviar">Iniciar sesión</button>
-            </form>
-        </div>
+                    <button type="submit" class="btn-enviar">Iniciar sesión</button>
+                </form>
 
-        <div class="navegacion">
-            <img src="{{ asset('css/Cove.jpeg') }}" alt="Logo de COVE" class="logo">
-        </div>
-    </section>
-
-    <nav class="navegacion">
-        <p>Otras secciones:</p>
-        <div class="navegacion-enlaces">
-            <a href="" class="btn-nav">Registrarse como nuevo usuario</a>
-            <a href="" class="btn-nav">Soporte técnico</a>
-        </div>
+                <nav class="nav-secundaria" aria-label="Enlaces de ayuda">
+                    <a href="#">Registro</a>
+                    <a href="#">Soporte técnico</a>
+                    <a href="#">FAQ</a>
+                </nav>
+            </div>
+        </section>
+        <img src="{{ asset('css/Cove.jpeg') }}" alt="Logo de COVE" class="logo">
+    </div>
     </nav>
-
-    <footer>
-        <p>&copy; 2024 COVE. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
