@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_completo', 50); # nombre real del usuario
             $table->string('alias', 30)->unique(); # alias o apodo dentro del sistema
-            $table->string('rol', 20)->enum('administrador', 'capturista')->default('capturista'); # rol del usuario dentro del sistema
+            $table->enum('rol', ['administrador', 'capturista']) ->default('capturista'); # rol del usuario dentro del sistema
             $table->string('correo', 100)->unique(); # dirección de correo del usuario para futuras acciones
             $table->timestamp('correo_verified_at')->nullable(); # fecha de verificación del correo
             $table->string('password');
