@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::redirect('/', '/login');
+Route::redirect('/', '/login'); #ruta pal inicio de la pagina
 
 Route::get('/', function () {
     return view('welcome');
